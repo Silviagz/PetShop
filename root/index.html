@@ -1,87 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Shop</title>
+    <title>Pet Shop II</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!-- acá se está llamando a la fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
-    <!-- <i class="fa-duotone fa-bars"></i>  //icono hamburguer
-    <i class="fa-thin fa-paw"></i>  //icono huellita
-    <i class="fa-duotone fa-dog"></i>  //icono dog
-    <i class="fa-solid fa-cat"></i>  //icono cat
-    <i class="fa-solid fa-envelopes"></i>  //icono email
-    <i class="fa-solid fa-location-dot"></i>  //icono location 
-    <i class="fa-solid fa-phone-plus"></i>  //icono tel -->
+    
 </head>
+
 <body>
-
     <header>
-        <h5>Grandes ofertas en comederos</h5>
-        <p>Español</p>
-        <p>ARG$</p>
-        <h3>My Cat&Dog</h3>
-
-        <nav>
+        <section class="header1">
+            <p>Grandes descuentos</p>
+            <nav>
+                <ul>
+                    <li>Español</li>
+                    <li>ARG$</li>
+                </ul>
+            </nav>
+            
+        </section>
+        <section class="header2 flex-around">
+        <img class="logo" src="./css/img/Logo.png" alt="Logo-img">
+        <nav class="menu">
             <ul>
-                <li>Categorias</li>
+                <li>Categorías</li>
                 <li>Pets</li>
                 <li>Nosotros</li>
-                <li>Contáctanos</li>
+                <li>Contactanos</li>
             </ul>
         </nav>
+        <i class="fa-solid fa-bars"></i> <!-- esta es la forma de llamar el icono que traje de fonts awesone -->
+        </section>
     </header>
 
     <main>
-        <section>
-            <h1>¡Es un placer tenerte aqui!</h1>
-            <h3>¡Comederos en descuento!</h3>
-            <button>COMEDEROS</button>
-        </section>
-        <article>
-            <h1>Productos Destacados</h1>
-            <nav>
-                <ul>
-                    <li>Comederos</li>
-                    <li>Accesorios</li>
-                    <li>Comida</li>
-                </ul>
-            </nav>
-            <div>
-                <p>Juguete churrasquito</p>
-                <p>Comedero para perro</p>
-                <p>Juguete huesito</p>
-            </div>
-        </article>
-        <section>
-            <h2>Contáctanos</h2>
-            <form>
-                <label for="text" name="Nombre y Apellido">
-                    <input type="text" name="Nombre y Apellido" id="Nombre y Apellido" placeholder="Nombre y Apellido">
-                </label>
-                <label for="email" name="Ingresa tu correo electronico">
-                    <input type="email" name="Ingresa tu correo electrónico" id="Ingresa tu correo electrónico" placeholder="Ingresa tu correo electrónico">
-                </label>
-                <label for="tel" name="Teléfono">
-                    <input type="tel" name="Teléfono" id="Teléfono" placeholder="Teléfono">
-                </label>
-                <button>Resetear</button>
-                <button>Enviar</button>
-            </form>
-        </section>
-        <article>
-            <h2>Suscribete para más novedades</h2>
-            <label for="">
-            <input type="email" name="Ingresa tu correo electrónico" id="Ingresa tu correo electrónico" placeholder="Ingresa tu correo electrónico">
-            </label>
-            <button>Suscribirme</button>
-        </article>
+    <section class="imgfondo">
+        <div class="banner flex-around">
+        <h2>¡Es un placer tener aquí!</h2>
+        <p>¡Comederos en descuentos!</p>
+        <button>COMEDEROS</button>
+        </div>
+    </section>
+
+    <section class="menu2 flex-around">
+    <img src="./css/img/pawprint 1.png" alt="logo-huellita">
+    <h2>Productos Destacados</h2>
+    <nav>
+        <ul class="listamenus2 flex-around">
+            <li><a href="#">Comederos</a></li>
+            <li>-</li>
+            <li><a href="#">Accesorios</a></li>
+            <li>-</li>
+            <li><a href="#">Comida</a></li>
+        </ul>
+    </nav>
+    </section>
+    <section class="Productos flex-around">
+        <div class="flex-around cardproductos">
+            <img src="./css/img/churrasquito.png">
+            <p>Jueguete churrasquito</p>
+            <span>$150</span>
+        </div>
+        <div class="flex-around cardproductos">
+            <img src="./css/img/comedero.png">
+            <p>Comedero para perro</p>
+            <span>$250</span>
+        </div>
+        
+        <div class="flex-around cardproductos">
+            <img src="./css/img/Huesito.png">
+            <p>Jueguete Huesito</p>
+            <span>$650</span>
+        </div>
+    </section>
+    <section class="formato-contacto flex-around">
+        <h2>Contáctanos</h2>
+        <input type="text" placeholder="Nombre y apellido">
+        <input type="text" placeholder="Ingresa a tu correo electrónico">
+        <input type="text" placeholder="Teléfono">
+        <div class="flex-around botones">
+            <button class="izq">Resetear</button>
+            <button class="der">Enviar</button>
+        </div>
+    </section>
+    <section class="finalone flex-around">
+        <div class="part1 flex-around">
+        <i class="fa-solid fa-envelope"></i>
+        <h3>Suscríbete para más novedades</h3>
+        </div>
+        <div class="part2 flex-around">
+        <input type="text" placeholder="Ingresa a tu correo electrónico">
+        <button>Suscribirme</button>
+        </div>
+</section>
     </main>
-    <footer>
-        <h2>Dirección</h2>
-        <h2>Teléfono</h2>
-        <h2>Correo Electrónico</h2>
+    <footer class="flex-around">
+        <div class="logo_footer flex-around">
+        <img src="./css/img/Logofooter.png" alt="logofooter">
+        </div>
+        <section class="lista1y2">
+            <section class="lista1">
+                    <div class="finalsecimg flex-around">
+                        <img src="./css/img/Icono A.png" alt="localización">
+                        <img src="./css/img/Icono B.png" alt="teléfono">
+                        <img src="./css/img/Icono C.png" alt="email">
+                    </div>
+            </section>
+            <section class="lista2">
+                <div class="finalsectext flex-around">
+                    <h2>Localidad</h2>
+                    <p>Calle - provincia</p>
+                </div>
+                <div class="finalsectext flex-around">
+                    <h2>Número de teléfono</h2>
+                    <p>15-111-111</p></div>
+                <div class="finalsectext flex-around">
+                    <h2>Correo electrónico</h2>
+                    <p>Dirección de correo</p></div>
+                </div>
+            </section>
+    </section>
+        <p class="derechos">Todos los derechos reservados</p>
     </footer>
     
 </body>
+
 </html>
