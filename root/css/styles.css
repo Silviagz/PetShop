@@ -1,4 +1,4 @@
- /*justify content solamente se aplica de forma vertical cuando el main axis es horizontal*/ /* y el align items se organiza vertical*/
+/*justify content solamente se aplica de forma vertical cuando el main axis es horizontal*/ /* y el align items se organiza vertical*/
     /*---------------------------Versión mobile first-----*/
     /*seteado general*/
     *{
@@ -6,6 +6,7 @@
         padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
         box-sizing: border-box; /* esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde*/
         font-family: 'Roboto', sans-serif;
+        border: solid red 1px;
     }
 
 /* Se crea esta clase para que sea reutilizada a lo largo del html*/
@@ -185,7 +186,6 @@
     }
     main .botones{
     justify-content: center;
-    margin:7%;
     width: 90vw;
     height: 10vh;
     margin: 5%;
@@ -320,11 +320,248 @@ footer .derechos{
     text-align: center;
 }
 
-    @media(max-width:500px){
-
+@media(max-width:500px){
         /* configuración del header version mobile*/
         .header1, .menu{
-        display: none; /* acá se está añadiendo la propiedad para desaparecer el display*/
-        }  
-        
+        display:none;/* acá se está añadiendo la propiedad para desaparecer el display*/
         }
+
+}
+/*------------------- versopm desktop--------*/
+@media(min-width: 1024px){
+    /*seteo primer encabezado*/
+    .header1{
+        background-color: #222222;
+        color: #fff;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .header1 ul{
+        text-decoration: none;
+        list-style-type: none;
+        list-style-type: '>';
+        justify-content: space-between;
+        width: 12vw;
+    }
+
+    /*seteo segundo encabezado*/
+
+    
+    /* seteado contendor del header y elementos (logo y menú navegación desktop)*/
+    header .header2{
+        justify-content: space-between;
+    }
+
+    /*seteo barra navegación (categorias,pets,nosotros, contactanos)*/
+    .header2 ul{
+        display: flex;
+        width: 40vw;
+        justify-content: space-around;
+        margin-right: 2%;
+    }
+    .header2 .menu li{
+        list-style-type: '';
+    }
+
+    /* seteo logo (frontcatydog)*/
+    header .logo{ /*Esto se hizo porque la imagen del logo era más grande lo normal*/
+        width: 20%;
+        margin-left: 2%;
+    }
+    /*ocultando menú hamburguesa*/
+
+    header .fa-solid{
+        display: none;
+    }
+    /*------------ inicio del main -------*/
+
+    /*primera seccción del main*/
+    
+    /* seteo contenedor elementos primera
+    sección del main*/
+    main .banner{
+        margin: 20vh 58vw; /*se mueve el contenido del contedor y se alinea*/
+        width: 40vw;
+    }
+    /* elemento "Es un placer tenerte aqui"*/
+    main .imgfondo h2{
+        width: 30vw;
+        height: 5vh;
+        padding: 0.2em;
+    }
+    /* seteo elemento p (comederos en descuento)*/
+    
+    main .imgfondo p{
+        font-weight: 500;
+    }
+    /*seteo elemento button (comederos)*/
+
+    main .imgfondo button{
+    padding: 0.6em;
+    }
+
+    /*Segunda sección del main*/
+
+    /*seteo contenedor segunda sección main*/
+    main .menu2 {
+        margin-top: 3%;
+    }
+    /*seteo logo huella*/
+    main .menu2 img{
+        width: 8vw;
+        margin-bottom: 1%;
+    }
+    /* seteo productos destacados*/
+    main .menu2 h2{
+        font-size: 3em;
+        margin-bottom: 2%;
+    }
+    /* seteo contenedor y elementos menu2 (comederos, accesorios, comida)*/
+    main .menu2 nav{
+        width: 32%;
+    }
+    main .listamenus2 li{
+        margin-top: 0%;
+    }
+    .listamenus2 a{
+        font-size: 1em;
+    }
+/*------- tercera sección del main---------*/
+
+/* seteo contenedor tercer sección*/
+    main .Productos{
+        flex-direction: row;
+        margin-top: 3%;
+        justify-content: center;
+        gap: 2%;
+    }
+    /*seteo elemetnos cards (img, p, span)*/
+    
+    main .cardproductos p{
+        font-size: 15px;
+        font-weight: 600;
+        
+    }
+    main .cardproductos span{
+        margin-top: 1%;
+    }
+
+    /*---------- cuarta sección del main----*/
+
+    /*configruación contáctanos*/
+
+    main .formato-contacto h2{
+        font-size: 25px;
+        margin-bottom: 1%;
+    }
+    /*configuración inputs */
+    main .formato-contacto input{
+        width: 38%;
+    }
+    main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
+        color: #fff;
+    }
+    /* configuración de botones */
+    main .botones{
+    width:26vw;
+    height: 7.5vh;
+    margin: 2%;
+    }
+    main .botones button{ 
+        font-size: 1rem;
+    }
+/*----------quinta sección del main-----*/
+/* contenedor quinta sección del main*/
+main .finalone{
+    flex-direction: row;
+    height: 6vh;
+    justify-content: space-between;
+}
+
+/* seteo contenedor primera parte quinta sección del main, icono y h3*/
+main .finalone .part1{
+    width: 50%;
+}
+
+/*seteo h3*/
+main .finalone h3{
+    font-size: 20px;
+    margin-left: 0%;
+}
+
+/*segunda parte quinta sección del main*/
+
+main .finalone .part2{
+    height: 6vh;
+    width: 40%;
+    align-content: center;
+}
+
+    /*------ fin del main-------- */
+
+    /*-------Acá inicia el footer---*/
+/*contenedor footer*/
+footer{
+    flex-direction: row-reverse;
+}
+
+footer .elementC{
+    flex-grow: 1;
+    align-self: end;
+    position: absolute;
+    width: 100%;
+}
+
+/*contenedor de las dos listas emsabladas en el footer*/
+footer .lista1y2{
+    gap: 0%;
+    width: 60%;
+    margin-right: 30%;
+}
+/*seteo logo footer*/
+
+footer .logo_footer{
+    width: 100%;
+    height: 0%; 
+}
+.logo_footer img{
+    width: 90%;
+    margin: 70%;
+}
+/*seteo lista1 iconos footer*/
+footer .lista1{
+width: 20%;
+margin-left: 0%;
+}
+footer .finalsecimg{
+    width: 80%;
+    gap:14px;
+    margin-top: 14%;
+}
+footer .finalsecimg img{
+    font-size: 90px;
+}
+/*seteo lista2 info, localidad, telefono, correo*/
+footer .lista2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 40vw;
+    margin-bottom: 4%;
+    align-items: flex-start;
+    justify-content: space-around;
+
+}
+footer .finalsectext{
+    gap: 0px;
+}
+
+footer .finalsectext h2{
+    margin-top: 3%;
+
+}
+footer .finalsectext p{
+align-items: flex-start;
+}
+
+}
