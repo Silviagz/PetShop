@@ -6,7 +6,6 @@
         padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
         box-sizing: border-box; /* esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde*/
         font-family: 'Roboto', sans-serif;
-        border: solid red 1px;
     }
 
 /* Se crea esta clase para que sea reutilizada a lo largo del html*/
@@ -18,6 +17,29 @@
     /* se inicia con esta configuración porque el header1 hace parte del version desktop que contiene una p y un nav*/
     
     /*configuración del header*/
+    /* configuración linkeo y efectos de los nav header*/
+
+    header .header1 nav .nav1 li a{
+        color: white;
+        text-decoration: none;
+    }
+    header .header1 nav .nav1 li a:hover{
+        cursor: pointer;
+        transition: 0.5s;
+        font-size: 15px;
+        color:#F0A83E;
+    }
+    header .header2 .menu ul li a{
+        text-decoration: none;
+        color: #fff;
+    }
+    header .header2 .menu ul li a:hover{
+        cursor: pointer;
+        transition: 0.5s;
+        font-size: 20px;
+        color:#3C2313;
+    }
+
     header .header2{   
         background-color: #F0A83E;
         }
@@ -31,8 +53,8 @@
 
     /* seteo logo (frontcatydog)*/
     header .logo{ /*Esto se hizo porque la imagen del logo era más grande lo normal*/
-        width: 35%;
-        height: 40%;
+    height: 2.5vh;
+    
     }
     /*seteo menú hamburguesa*/
 
@@ -60,7 +82,7 @@
         align-items: center;
         gap: 3px;
     }
-    /* elemento "Es un placer tenerte aqui"*/
+    /* elemento "Es un placer tenerte aqui" Y efectos*/
     main .imgfondo h2{
         background-color: #fff;
         width: 80vw;
@@ -69,14 +91,24 @@
         border-radius: 5px;
         color: #3C2313;
         text-align: center;
-
     }
-    /* seteo elemento p (comederos en descuento)*/
+    main .imgfondo h2:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 25px;
+    color: #FFFFFF;
+    background-color: #F0A83E;
+    }
+    /* seteo elemento p (comederos en descuento) y efecto*/
     
     main .imgfondo p{
         color: #3C2313;
         font-weight: 400;
     }
+    main .imgfondo p:hover{
+    cursor: pointer;
+    }
+
     /*seteo elemento button (comederos)*/
 
     main .imgfondo button{
@@ -88,6 +120,12 @@
     border-radius: 5px;
     font-size: 1.2em;
     }
+    main .imgfondo button:hover{
+        opacity: 0.7;
+        cursor: pointer;
+        transition: 0.5s;
+        background-color: #3C2313;
+    }
 
     /*Segunda sección del main*/
 
@@ -98,12 +136,16 @@
         margin-top: 5%;
         
     }
-    /*seteo logo huella*/
+    /*seteo logo huella y efecto*/
     main .menu2 img{
         width: 20vw;
         height: 10vh; 
         margin-bottom: 5%;
     }
+    main .menu2 img:hover{
+    cursor: pointer;
+    }
+
     /* seteo productos destacados*/
     main .menu2 h2{
         font-size: 2.8em;
@@ -112,6 +154,9 @@
         margin-bottom: 5%;
         color: #3C2313;
         font-weight: 900;
+    }
+    main .menu2 h2:hover{
+        cursor: pointer;
     }
     /* seteo contenedor y elementos menu2 (comederos, accesorios, comida)*/
     main .menu2 nav{
@@ -127,6 +172,12 @@
         color:#666666;
         font-size: 0.9em;
     }
+    .listamenus2 a:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+    color: #F0A83E;
+    }
 /*------- tercera sección del main---------*/
 
 /* seteo contenedor tercer sección*/
@@ -135,12 +186,22 @@
         align-items: center;
         margin-top: 10%;
     }
-    /*seteo elemetnos cards (img, p, span)*/
+    /*seteo elemetnos cards (img, p, span) y efectos*/
     main .cardproductos{
         flex-direction: column;
         align-items: center;
         margin-bottom: 8%;
         background-color: #FBFAF6;
+    }
+
+    main .Productos .cardproductos{
+        box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+        overflow: hidden;
+        transition: all 0.25;
+    }
+    main .Productos .cardproductos:hover{
+        transform: translateY(-15px);
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
     }
     main .cardproductos p{
         color:#3C2313;
@@ -191,13 +252,19 @@
     margin: 5%;
     }
     main .botones button{ /* Acá llamo a los dos botones mirar la forma de llamar esta clase*/
-        height: 60%;
-        width: 100%;
-        color: #fff;
-        border:none;
-        margin: 5px;
-        border-radius: 25px;
+    height: 60%;
+    width: 100%;
+    color: #fff;
+    border:none;
+    margin: 5px;
+    border-radius: 25px;
     }
+    main .botones button:hover{ 
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+    }
+
     main .izq{
         background-color:#8A8787;
 
@@ -220,19 +287,31 @@ main .finalone .part1{
     align-items: center;
     justify-content: flex-start;
 }
-/*seteo icono*/
+/*seteo icono y efecto*/
 main .finalone i{
     color:#fff;
     font-size: 32px;
     margin: 2%;
 }
-/*seteo h3*/
+main .finalone i:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #3C2313;
+}
+/*seteo h3 y efecto*/
 main .finalone h3{
     text-align: center;
     color:#FFFFFF;
     font-size: 22px;
     margin-left: 10%;
     line-height: 23px;
+}
+main .finalone h3:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+    color: #3C2313;
 }
 
 /*segunda parte quinta sección del main*/
@@ -256,6 +335,11 @@ main .part2 button{
     margin-right: 5%;
     font-size: 1rem;
     border: none;
+}
+main .part2 button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
 }
     /*------ fin del main-------- */
 
@@ -281,7 +365,7 @@ footer .logo_footer{
     margin: 1%;
 }
 
-/*seteo lista1 iconos footer*/
+/*seteo lista1 iconos footer y efectos*/
 footer .lista1{
 width: 19%;
 margin-left: 20%;
@@ -291,10 +375,13 @@ footer .finalsecimg{
     width: 100%;
     gap:20px;
 }
+footer .finalsecimg:hover{
+    cursor: pointer;
+}
 footer .finalsecimg img{
     font-size: 80px;
 }
-/*seteo lista2 info, localidad, telefono, correo*/
+/*seteo lista2 info, localidad, telefono, correo y efectos*/
 footer .lista2{
     width: 100%;
 }
@@ -310,8 +397,21 @@ footer .finalsectext h2{
     margin-top: 2%;
     color: #fff;
 }
+footer .finalsectext h2:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 30px;
+    color: #F0A83E;
+}
+
 footer .finalsectext p{
 color: #8A8787;
+}
+footer .finalsectext p:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 30px;
+    color: #F0A83E;
 }
 
 footer .derechos{
@@ -319,6 +419,14 @@ footer .derechos{
     color: #FFFFFF;
     text-align: center;
 }
+
+footer .derechos:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    color: #F0A83E;
+}
+
+
 
 @media(max-width:500px){
         /* configuración del header version mobile*/
@@ -563,5 +671,4 @@ footer .finalsectext h2{
 footer .finalsectext p{
 align-items: flex-start;
 }
-
 }
