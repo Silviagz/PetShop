@@ -1,6 +1,7 @@
-/*justify content solamente se aplica de forma vertical cuando el main axis es horizontal*/ /* y el align items se organiza vertical*/
+
     /*---------------------------Versión mobile first-----*/
-    /*seteado general*/
+    /*seteado general: navegador recomendado google chrome
+resolución recomendada: 500px versión mobile, 1024 versión desktop*/
     *{
         margin:0;
         padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
@@ -435,7 +436,7 @@ footer .derechos:hover{
         }
 
 }
-/*------------------- versopm desktop--------*/
+/*------------------- version desktop--------*/
 @media(min-width: 1024px){
     /*seteo primer encabezado*/
     .header1{
@@ -443,6 +444,12 @@ footer .derechos:hover{
         color: #fff;
         align-items: center;
         justify-content: space-between;
+    }
+    .header1 p:hover{
+        cursor: pointer;
+        transition: 0.2s;
+        color: #F0A83E;
+
     }
     .header1 ul{
         text-decoration: none;
@@ -475,6 +482,9 @@ footer .derechos:hover{
     header .logo{ /*Esto se hizo porque la imagen del logo era más grande lo normal*/
         width: 20%;
         margin-left: 2%;
+    }
+    header .logo:hover{
+        cursor: pointer;
     }
     /*ocultando menú hamburguesa*/
 
