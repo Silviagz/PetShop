@@ -9,6 +9,11 @@ resolución recomendada: 500px versión mobile, 1024 versión desktop*/
     font-family: 'Roboto', sans-serif;
 }
 
+*{
+    border-color: red;
+    border-style: solid;
+}
+
 /* Se crea esta clase para que sea reutilizada a lo largo del html*/
 
 .flex-around{
