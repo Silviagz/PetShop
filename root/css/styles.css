@@ -1,330 +1,684 @@
- /*justify content solamente se aplica de forma vertical cuando el main axis es horizontal*/ /* y el align items se organiza vertical*/
+
     /*---------------------------Versión mobile first-----*/
-    /*seteado general*/
-    *{
-        margin:0;
-        padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
-        box-sizing: border-box; /* esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde*/
-        font-family: 'Roboto', sans-serif;
-    }
+    /*seteado general: navegador recomendado google chrome
+resolución recomendada: 500px versión mobile, 1024 versión desktop*/
+*{
+    margin:0;
+    padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
+    box-sizing: border-box; /* esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde*/
+    font-family: 'Roboto', sans-serif;
+}
 
 /* Se crea esta clase para que sea reutilizada a lo largo del html*/
 
-    .flex-around{
-        display: flex;
-        justify-content: space-around; /* se llama a esta clase en el html y se aplica, importante anotarlo*/
-    }
-    /* se inicia con esta configuración porque el header1 hace parte del version desktop que contiene una p y un nav*/
-    
-    /*configuración del header*/
-    header .header2{   
-        background-color: #F0A83E;
-        }
-    
-    /* seteado contendor del header y elementos (logo y menú hamburguesa)*/
-    header .header2{
-        height: 7vh;
-        color: #fff;
-        align-items: center;
-    }
+.flex-around{
+    display: flex;
+    justify-content: space-around; /* se llama a esta clase en el html y se aplica, importante anotarlo*/
+}
+/* se inicia con esta configuración porque el header1 hace parte del version desktop que contiene una p y un nav*/
 
-    /* seteo logo (frontcatydog)*/
-    header .logo{ /*Esto se hizo porque la imagen del logo era más grande lo normal*/
-        width: 35%;
-        height: 40%;
-    }
-    /*seteo menú hamburguesa*/
+/*configuración del header*/
+/* configuración linkeo y efectos de los nav header*/
 
-    header i{
-        font-size: 1.5em;
-    }
-    /*------------ inicio del main -------*/
+header .header1 nav .nav1 li a{
+    color: white;
+    text-decoration: none;
+}
+header .header1 nav .nav1 li a:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 15px;
+    color:#F0A83E;
+}
+header .header2 .menu ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+header .header2 .menu ul li a:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 20px;
+    color:#3C2313;
+}
 
-    /*primera seccción del main*/
-    /*  seteo img de fondo */
-    main .imgfondo{
-        position: relative; /*cuando se mueve un objeto, pero no pierde el espacio lo conserva, pero con posición absoluta se mueve el objeto y lo rellena con el espacio*/ /*repasar posiciones*/
-        background-image: url("./img/bowl-and-pet-daities-on-green-background\ 1.png");
-        height: 55vh;
-        background-size: cover; /*porque la imagen es pequeña y el sistema la completa con la repetición de la misma por eso le ponemos esa propiedad*/
-        }
-    /* seteo contenedor elementos primera
-    sección del main*/
-    main .banner{
-        position:absolute;
-        margin: 35vh 7vw; /*se mueve el contenido del contedor y se alinea*/
-        flex-direction: column; /*cambio de ejes*/
-        height: 18vh;
-        width: 84vw;
-        align-items: center;
-        gap: 3px;
-    }
-    /* elemento "Es un placer tenerte aqui"*/
-    main .imgfondo h2{
-        background-color: #fff;
-        width: 80vw;
-        height: 10vh;
-        padding: 0.6em;
-        border-radius: 5px;
-        color: #3C2313;
-        text-align: center;
-
-    }
-    /* seteo elemento p (comederos en descuento)*/
-    
-    main .imgfondo p{
-        color: #3C2313;
-        font-weight: 400;
-    }
-    /*seteo elemento button (comederos)*/
-
-    main .imgfondo button{
+header .header2{   
     background-color: #F0A83E;
-    color:#fff;
-    padding: 0.8em;
-    width: 40%;
-    border: none;
+    }
+
+/* seteado contendor del header y elementos (logo y menú hamburguesa)*/
+header .header2{
+    height: 7vh;
+    color: #fff;
+    align-items: center;
+}
+
+/* seteo logo (frontcatydog)*/
+header .logo{ /*Esto se hizo porque la imagen del logo era más grande lo normal*/
+height: 2.5vh;
+
+}
+/*seteo menú hamburguesa*/
+
+header i{
+    font-size: 1.5em;
+}
+/*------------ inicio del main -------*/
+
+/*primera seccción del main*/
+/*  seteo img de fondo */
+main .imgfondo{
+    position: relative; /*cuando se mueve un objeto, pero no pierde el espacio lo conserva, pero con posición absoluta se mueve el objeto y lo rellena con el espacio*/ /*repasar posiciones*/
+    background-image: url("./img/bowl-and-pet-daities-on-green-background\ 1.png");
+    height: 55vh;
+    background-size: cover; /*porque la imagen es pequeña y el sistema la completa con la repetición de la misma por eso le ponemos esa propiedad*/
+    }
+/* seteo contenedor elementos primera
+sección del main*/
+main .banner{
+    position:absolute;
+    margin: 35vh 7vw; /*se mueve el contenido del contedor y se alinea*/
+    flex-direction: column; /*cambio de ejes*/
+    height: 18vh;
+    width: 84vw;
+    align-items: center;
+    gap: 3px;
+}
+/* elemento "Es un placer tenerte aqui" Y efectos*/
+main .imgfondo h2{
+    background-color: #fff;
+    width: 80vw;
+    height: 10vh;
+    padding: 0.6em;
     border-radius: 5px;
-    font-size: 1.2em;
-    }
+    color: #3C2313;
+    text-align: center;
+}
+main .imgfondo h2:hover{
+cursor: pointer;
+transition: 0.2s;
+font-size: 25px;
+color: #FFFFFF;
+background-color: #F0A83E;
+}
+/* seteo elemento p (comederos en descuento) y efecto*/
 
-    /*Segunda sección del main*/
+main .imgfondo p{
+    color: #3C2313;
+    font-weight: 400;
+}
+main .imgfondo p:hover{
+cursor: pointer;
+}
 
-    /*seteo contenedor segunda sección main*/
-    main .menu2 {
-        flex-direction: column; /* en este caso se llama al menú con esta organización para organizar el contenido*/
-        align-items: center; /* en este caso se aplica porque se llama al flex direction column*/
-        margin-top: 5%;
-        
-    }
-    /*seteo logo huella*/
-    main .menu2 img{
-        width: 20vw;
-        height: 10vh; 
-        margin-bottom: 5%;
-    }
-    /* seteo productos destacados*/
-    main .menu2 h2{
-        font-size: 2.8em;
-        width: 60%;
-        text-align: center;
-        margin-bottom: 5%;
-        color: #3C2313;
-        font-weight: 900;
-    }
-    /* seteo contenedor y elementos menu2 (comederos, accesorios, comida)*/
-    main .menu2 nav{
-        width: 80%;
-    }
-    main .listamenus2 li{
-        list-style: none;
-        color: #666666;
-        margin-top: 5%;
-    }
-    .listamenus2 a{
-        text-decoration: none;
-        color:#666666;
-        font-size: 0.9em;
-    }
+/*seteo elemento button (comederos)*/
+
+main .imgfondo button{
+background-color: #F0A83E;
+color:#fff;
+padding: 0.8em;
+width: 40%;
+border: none;
+border-radius: 5px;
+font-size: 1.2em;
+}
+main .imgfondo button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: #3C2313;
+}
+
+/*Segunda sección del main*/
+
+/*seteo contenedor segunda sección main*/
+main .menu2 {
+    flex-direction: column; /* en este caso se llama al menú con esta organización para organizar el contenido*/
+    align-items: center; /* en este caso se aplica porque se llama al flex direction column*/
+    margin-top: 5%;
+    
+}
+/*seteo logo huella y efecto*/
+main .menu2 img{
+    width: 20vw;
+    height: 10vh; 
+    margin-bottom: 5%;
+}
+main .menu2 img:hover{
+cursor: pointer;
+}
+
+/* seteo productos destacados*/
+main .menu2 h2{
+    font-size: 2.8em;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 5%;
+    color: #3C2313;
+    font-weight: 900;
+}
+main .menu2 h2:hover{
+    cursor: pointer;
+}
+/* seteo contenedor y elementos menu2 (comederos, accesorios, comida)*/
+main .menu2 nav{
+    width: 80%;
+}
+main .listamenus2 li{
+    list-style: none;
+    color: #666666;
+    margin-top: 5%;
+}
+.listamenus2 a{
+    text-decoration: none;
+    color:#666666;
+    font-size: 0.9em;
+}
+.listamenus2 a:hover{
+cursor: pointer;
+transition: 0.5s;
+font-size: 20px;
+color: #F0A83E;
+}
 /*------- tercera sección del main---------*/
 
 /* seteo contenedor tercer sección*/
-    main .Productos{
-        flex-direction: column; /* se aplica porque al llamar a la clase flex around, nos invierte el eje y tocar volver a invertir*/
-        align-items: center;
-        margin-top: 10%;
-    }
-    /*seteo elemetnos cards (img, p, span)*/
-    main .cardproductos{
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 8%;
-        background-color: #FBFAF6;
-    }
-    main .cardproductos p{
-        color:#3C2313;
-        font-size: 13px;
-        font-weight: 800;
-        line-height: 15px;
-    }
-    main .cardproductos span{
-        color: #F0A83E;
-        font-weight: 600px;
-        margin-top: 3%;
-        margin-bottom: 5px;
-    }
+main .Productos{
+    flex-direction: column; /* se aplica porque al llamar a la clase flex around, nos invierte el eje y tocar volver a invertir*/
+    align-items: center;
+    margin-top: 10%;
+}
+/*seteo elemetnos cards (img, p, span) y efectos*/
+main .cardproductos{
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8%;
+    background-color: #FBFAF6;
+}
 
-    /*---------- cuarta sección del main----*/
+main .Productos .cardproductos{
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    overflow: hidden;
+    transition: all 0.25;
+}
+main .Productos .cardproductos:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+main .cardproductos p{
+    color:#3C2313;
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 15px;
+}
+main .cardproductos span{
+    color: #F0A83E;
+    font-weight: 600px;
+    margin-top: 3%;
+    margin-bottom: 5px;
+}
 
-    /*seteo contenedor cuarta sección main*/
+/*---------- cuarta sección del main----*/
 
-    main .formato-contacto{
-        flex-direction: column;
-        align-items: center;
-    }
-    /*configruación contáctanos*/
+/*seteo contenedor cuarta sección main*/
 
-    main .formato-contacto h2{
-        font-size: 40px;
-        color:#3C2313;
-        margin-bottom: 6%;
-    }
-    /*configuración inputs */
-    main .formato-contacto input{
-        background-color: #3C2313;
-        color: #AB9C9C;
-        width: 75%; /*se modifica ancho de los botones*/
-        font-size: 10px;
-        height: 40px; /*se aumenta el ancho de los botones*/
-        border-radius: 15px; /* En este caso se cambia la forma de los botones a circulares*/
-        margin-bottom: 1%;
-        border: none; /*se quita borde de los botones*/
-    }
-    main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
-        text-align: center;
-    }
-    main .botones{
-    justify-content: center;
-    margin:7%;
-    width: 90vw;
-    height: 10vh;
-    margin: 5%;
-    }
-    main .botones button{ /* Acá llamo a los dos botones mirar la forma de llamar esta clase*/
-        height: 60%;
-        width: 100%;
-        color: #fff;
-        border:none;
-        margin: 5px;
-        border-radius: 25px;
-    }
-    main .izq{
-        background-color:#8A8787;
+main .formato-contacto{
+    flex-direction: column;
+    align-items: center;
+}
+/*configruación contáctanos*/
 
-    }
-    main .der{
-        background-color: #F0A83E;
-    }
+main .formato-contacto h2{
+    font-size: 40px;
+    color:#3C2313;
+    margin-bottom: 6%;
+}
+/*configuración inputs */
+main .formato-contacto input{
+    background-color: #3C2313;
+    color: #AB9C9C;
+    width: 75%; /*se modifica ancho de los botones*/
+    font-size: 10px;
+    height: 40px; /*se aumenta el ancho de los botones*/
+    border-radius: 15px; /* En este caso se cambia la forma de los botones a circulares*/
+    margin-bottom: 1%;
+    border: none; /*se quita borde de los botones*/
+}
+main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
+    text-align: center;
+}
+main .botones{
+justify-content: center;
+width: 90vw;
+height: 10vh;
+margin: 5%;
+}
+main .botones button{ /* Acá llamo a los dos botones mirar la forma de llamar esta clase*/
+height: 60%;
+width: 100%;
+color: #fff;
+border:none;
+margin: 5px;
+border-radius: 25px;
+}
+main .botones button:hover{ 
+opacity: 0.7;
+cursor: pointer;
+transition: 0.5s;
+}
+
+main .izq{
+    background-color:#8A8787;
+
+}
+main .der{
+    background-color: #F0A83E;
+}
 /*----------quinta sección del main-----*/
 /* contenedor quinta sección del main*/
 main .finalone{
-    background-color: #F0A83E;
-    flex-direction: column;
-    /*width: 100%;*/
-    height: 15vh;
+background-color: #F0A83E;
+flex-direction: column;
+/*width: 100%;*/
+height: 15vh;
 }
 
 /* seteo contenedor primera parte quinta sección del main, icono y h3*/
 main .finalone .part1{
-    width: 100%;
-    align-items: center;
-    justify-content: flex-start;
+width: 100%;
+align-items: center;
+justify-content: flex-start;
 }
-/*seteo icono*/
+/*seteo icono y efecto*/
 main .finalone i{
-    color:#fff;
-    font-size: 32px;
-    margin: 2%;
+color:#fff;
+font-size: 32px;
+margin: 2%;
 }
-/*seteo h3*/
+main .finalone i:hover{
+opacity: 0.7;
+cursor: pointer;
+transition: 0.5s;
+color: #3C2313;
+}
+/*seteo h3 y efecto*/
 main .finalone h3{
-    text-align: center;
-    color:#FFFFFF;
-    font-size: 22px;
-    margin-left: 10%;
-    line-height: 23px;
+text-align: center;
+color:#FFFFFF;
+font-size: 22px;
+margin-left: 10%;
+line-height: 23px;
+}
+main .finalone h3:hover{
+opacity: 0.7;
+cursor: pointer;
+transition: 0.5s;
+color: #3C2313;
 }
 
 /*segunda parte quinta sección del main*/
 
 main .finalone .part2{
-    height: 100vh;
-    align-items: center;
+height: 100vh;
+align-items: center;
 }
 main .part2 input{
-    border-radius: 15px;
-    width: 60%;
-    height: 68%;
-    border: none;
+border-radius: 15px;
+width: 60%;
+height: 68%;
+border: none;
 }
 main .part2 button{
-    border-radius: 25px;
-    width: 30%;
-    height: 60%;
-    background-color: #3C2313;
-    color: #fff;
-    margin-right: 5%;
-    font-size: 1rem;
-    border: none;
+border-radius: 25px;
+width: 30%;
+height: 60%;
+background-color: #3C2313;
+color: #fff;
+margin-right: 5%;
+font-size: 1rem;
+border: none;
 }
-    /*------ fin del main-------- */
+main .part2 button:hover{
+opacity: 0.7;
+cursor: pointer;
+transition: 0.5s;
+}
+/*------ fin del main-------- */
 
-    /*-------Acá inicia el footer---*/
+/*-------Acá inicia el footer---*/
 /*contenedor footer*/
 footer{
-    flex-direction: column;
-    background-color: #3C2313;
+flex-direction: column;
+background-color: #3C2313;
 }
 /*contenedor de las dos listas emsabladas en el footer*/
 footer .lista1y2{
-    display: flex;
-    justify-content: center;
-    gap:1%;
-    margin: 2%;
+display: flex;
+justify-content: center;
+gap:1%;
+margin: 2%;
 }
 /*seteo logo footer*/
 footer .logo_footer{
-    text-align: center;
+text-align: center;
 }
 .logo_footer img{
-    width: 32%;
-    margin: 1%;
+width: 32%;
+margin: 1%;
 }
 
-/*seteo lista1 iconos footer*/
+/*seteo lista1 iconos footer y efectos*/
 footer .lista1{
 width: 19%;
 margin-left: 20%;
 }
 footer .finalsecimg{
-    flex-direction: column;
-    width: 100%;
-    gap:20px;
+flex-direction: column;
+width: 100%;
+gap:20px;
+}
+footer .finalsecimg:hover{
+cursor: pointer;
 }
 footer .finalsecimg img{
-    font-size: 80px;
+font-size: 80px;
 }
-/*seteo lista2 info, localidad, telefono, correo*/
+/*seteo lista2 info, localidad, telefono, correo y efectos*/
 footer .lista2{
-    width: 100%;
+width: 100%;
 }
 footer .finalsectext{
-    display: flex;
-    flex-direction: column;
-    margin-top: 2%;
-    gap: 15px;
-    width: 80%;
+display: flex;
+flex-direction: column;
+margin-top: 2%;
+gap: 15px;
+width: 80%;
 }
 
 footer .finalsectext h2{
-    margin-top: 2%;
-    color: #fff;
+margin-top: 2%;
+color: #fff;
 }
+footer .finalsectext h2:hover{
+cursor: pointer;
+transition: 0.2s;
+font-size: 30px;
+color: #F0A83E;
+}
+
 footer .finalsectext p{
 color: #8A8787;
 }
-
-footer .derechos{
-    background-color: #222222;
-    color: #FFFFFF;
-    text-align: center;
+footer .finalsectext p:hover{
+cursor: pointer;
+transition: 0.2s;
+font-size: 30px;
+color: #F0A83E;
 }
 
-    @media(max-width:500px){
+footer .derechos{
+background-color: #222222;
+color: #FFFFFF;
+text-align: center;
+}
 
-        /* configuración del header version mobile*/
-        .header1, .menu{
-        display: none; /* acá se está añadiendo la propiedad para desaparecer el display*/
-        }  
-        
-        }
+footer .derechos:hover{
+cursor: pointer;
+transition: 0.2s;
+color: #F0A83E;
+}
+
+
+
+@media(max-width:500px){
+    /* configuración del header version mobile*/
+    .header1, .menu{
+    display:none;/* acá se está añadiendo la propiedad para desaparecer el display*/
+    }
+
+}
+/*------------------- version desktop--------*/
+@media(min-width: 1024px){
+/*seteo primer encabezado*/
+.header1{
+    background-color: #222222;
+    color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+.header1 p:hover{
+    cursor: pointer;
+    transition: 0.2s;
+    color: #F0A83E;
+
+}
+.header1 ul{
+    text-decoration: none;
+    list-style-type: none;
+    list-style-type: '>';
+    justify-content: space-between;
+    width: 12vw;
+}
+
+/*seteo segundo encabezado*/
+
+
+/* seteado contendor del header y elementos (logo y menú navegación desktop)*/
+header .header2{
+    justify-content: space-between;
+}
+
+/*seteo barra navegación (categorias,pets,nosotros, contactanos)*/
+.header2 ul{
+    display: flex;
+    width: 40vw;
+    justify-content: space-around;
+    margin-right: 2%;
+}
+.header2 .menu li{
+    list-style-type: '';
+}
+
+/* seteo logo (frontcatydog)*/
+header .logo{ /*Esto se hizo porque la imagen del logo era más grande lo normal*/
+    width: 20%;
+    margin-left: 2%;
+}
+header .logo:hover{
+    cursor: pointer;
+}
+/*ocultando menú hamburguesa*/
+
+header .fa-solid{
+    display: none;
+}
+/*------------ inicio del main -------*/
+
+/*primera seccción del main*/
+
+/* seteo contenedor elementos primera
+sección del main*/
+main .banner{
+    margin: 20vh 58vw; /*se mueve el contenido del contedor y se alinea*/
+    width: 40vw;
+}
+/* elemento "Es un placer tenerte aqui"*/
+main .imgfondo h2{
+    width: 30vw;
+    height: 5vh;
+    padding: 0.2em;
+}
+/* seteo elemento p (comederos en descuento)*/
+
+main .imgfondo p{
+    font-weight: 500;
+}
+/*seteo elemento button (comederos)*/
+
+main .imgfondo button{
+padding: 0.6em;
+}
+
+/*Segunda sección del main*/
+
+/*seteo contenedor segunda sección main*/
+main .menu2 {
+    margin-top: 3%;
+}
+/*seteo logo huella*/
+main .menu2 img{
+    width: 8vw;
+    margin-bottom: 1%;
+}
+/* seteo productos destacados*/
+main .menu2 h2{
+    font-size: 3em;
+    margin-bottom: 2%;
+}
+/* seteo contenedor y elementos menu2 (comederos, accesorios, comida)*/
+main .menu2 nav{
+    width: 32%;
+}
+main .listamenus2 li{
+    margin-top: 0%;
+}
+.listamenus2 a{
+    font-size: 1em;
+}
+/*------- tercera sección del main---------*/
+
+/* seteo contenedor tercer sección*/
+main .Productos{
+    flex-direction: row;
+    margin-top: 3%;
+    justify-content: center;
+    gap: 2%;
+}
+/*seteo elemetnos cards (img, p, span)*/
+
+main .cardproductos p{
+    font-size: 15px;
+    font-weight: 600;
+    
+}
+main .cardproductos span{
+    margin-top: 1%;
+}
+
+/*---------- cuarta sección del main----*/
+
+/*configruación contáctanos*/
+
+main .formato-contacto h2{
+    font-size: 25px;
+    margin-bottom: 1%;
+}
+/*configuración inputs */
+main .formato-contacto input{
+    width: 38%;
+}
+main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
+    color: #fff;
+}
+/* configuración de botones */
+main .botones{
+width:26vw;
+height: 7.5vh;
+margin: 2%;
+}
+main .botones button{ 
+    font-size: 1rem;
+}
+/*----------quinta sección del main-----*/
+/* contenedor quinta sección del main*/
+main .finalone{
+flex-direction: row;
+height: 6vh;
+justify-content: space-between;
+}
+
+/* seteo contenedor primera parte quinta sección del main, icono y h3*/
+main .finalone .part1{
+width: 50%;
+}
+
+/*seteo h3*/
+main .finalone h3{
+font-size: 20px;
+margin-left: 0%;
+}
+
+/*segunda parte quinta sección del main*/
+
+main .finalone .part2{
+height: 6vh;
+width: 40%;
+align-content: center;
+}
+
+/*------ fin del main-------- */
+
+/*-------Acá inicia el footer---*/
+/*contenedor footer*/
+footer{
+flex-direction: row-reverse;
+}
+
+footer .elementC{
+flex-grow: 1;
+align-self: end;
+position: absolute;
+width: 100%;
+}
+
+/*contenedor de las dos listas emsabladas en el footer*/
+footer .lista1y2{
+gap: 0%;
+width: 60%;
+margin-right: 30%;
+}
+/*seteo logo footer*/
+
+footer .logo_footer{
+width: 100%;
+height: 0%; 
+}
+.logo_footer img{
+width: 90%;
+margin: 70%;
+}
+/*seteo lista1 iconos footer*/
+footer .lista1{
+width: 20%;
+margin-left: 0%;
+}
+footer .finalsecimg{
+width: 80%;
+gap:14px;
+margin-top: 14%;
+}
+footer .finalsecimg img{
+font-size: 90px;
+}
+/*seteo lista2 info, localidad, telefono, correo*/
+footer .lista2{
+display: flex;
+flex-direction: column;
+position: relative;
+width: 40vw;
+margin-bottom: 4%;
+align-items: flex-start;
+justify-content: space-around;
+
+}
+footer .finalsectext{
+gap: 0px;
+}
+
+footer .finalsectext h2{
+margin-top: 3%;
+
+}
+footer .finalsectext p{
+align-items: flex-start;
+}
+}
