@@ -21,3 +21,11 @@ stockComederos.forEach((comedero) => {
     `
     contenedorComederos.appendChild(div)
 });
+
+/*Creación del carrito de compras */
+let carrito = [];
+
+const agregarAlCarrito = (prodId) =>{
+    const item =stockProductos.find((prod) => prod.id ===prodId)
+    carrito.push(item)
+}
