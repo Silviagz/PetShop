@@ -5,14 +5,18 @@ resolución recomendada: 500px versión mobile, 1024 versión desktop*/
 *{
     margin:0;
     padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
-    box-sizing: border-box; /* esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde*/
+    /* box-sizing: border-box; esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde */
     font-family: 'Roboto', sans-serif;
 }
+body{
+    background-color: #fff8ed;
+background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23888786' fill-opacity='0.21' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
 
-*{
+/* *{
     border-color: red;
     border-style: solid;
-}
+} */
 
 /* Se crea esta clase para que sea reutilizada a lo largo del html*/
 
@@ -47,7 +51,7 @@ header .header2 .menu ul li a:hover{
 }
 
 header .header2{   
-    background-color: #F0A83E;
+    background-color: #041430;
     }
 
 /* seteado contendor del header y elementos (logo y menú hamburguesa)*/
@@ -78,8 +82,9 @@ header i{
 /*  seteo img de fondo */
 main .imgfondo{
     position: relative; /*cuando se mueve un objeto, pero no pierde el espacio lo conserva, pero con posición absoluta se mueve el objeto y lo rellena con el espacio*/ /*repasar posiciones*/
-    background-image: url("/img/bowl-and-pet-daities-on-green-background 1.png");
-    height: 55vh;
+    background-image: url("/root/img/comedero-antireflujo.png");
+    background-repeat: no-repeat;
+    height: 60vh;
     background-size: cover; /*porque la imagen es pequeña y el sistema la completa con la repetición de la misma por eso le ponemos esa propiedad*/
     }
 /* seteo contenedor elementos primera
@@ -95,15 +100,17 @@ main .banner{
 }
 /* elemento "Es un placer tenerte aqui" Y efectos*/
 main .imgfondo h2{
-    background-color: #fff;
+    background-color: #562f1454;
     width: 80vw;
     height: 10vh;
     padding: 0.6em;
+    margin: 0%;
     border-radius: 5px;
-    color: #3C2313;
+    color: #e0dcdc;
     text-align: center;
+    font-size: 1.5rem;
 }
-main .imgfondo h2:hover{
+main .imgfondo {
 cursor: pointer;
 transition: 0.2s;
 font-size: 25px;
@@ -113,8 +120,9 @@ background-color: #F0A83E;
 /* seteo elemento p (comederos en descuento) y efecto*/
 
 main .imgfondo p{
-    color: #3C2313;
-    font-weight: 400;
+    color: #cbcbcb;
+    
+    font-size: 1.2rem;
 }
 main .imgfondo p:hover{
 cursor: pointer;
@@ -123,13 +131,13 @@ cursor: pointer;
 /*seteo elemento button (comederos)*/
 
 main .imgfondo button{
-background-color: #F0A83E;
-color:#fff;
+background-color: #df6300bd;
+color:#5e5555;
 padding: 0.8em;
 width: 40%;
 border: none;
 border-radius: 5px;
-font-size: 1.2em;
+font-size: 1.2rem;
 }
 main .imgfondo button:hover{
     opacity: 0.7;
@@ -163,7 +171,7 @@ main .menu2 h2{
     width: 60%;
     text-align: center;
     margin-bottom: 5%;
-    color: #3C2313;
+    color: #68452d;
     font-weight: 900;
 }
 main .menu2 h2:hover{
@@ -239,19 +247,19 @@ main .formato-contacto{
 
 main .formato-contacto h2{
     font-size: 40px;
-    color:#3C2313;
+    color:#68452d;
     margin-bottom: 6%;
 }
 /*configuración inputs */
 main .formato-contacto input{
-    background-color: #3C2313;
+    background-color: #df6300bd;
     color: #AB9C9C;
     width: 75%; /*se modifica ancho de los botones*/
     font-size: 10px;
     height: 40px; /*se aumenta el ancho de los botones*/
     border-radius: 15px; /* En este caso se cambia la forma de los botones a circulares*/
     margin-bottom: 1%;
-    border: none; /*se quita borde de los botones*/
+    border-color: #708090; /*se quita borde de los botones*/
 }
 main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
     text-align: center;
@@ -277,7 +285,7 @@ transition: 0.5s;
 }
 
 main .izq{
-    background-color:#8A8787;
+    background-color:#68452d;
 
 }
 main .der{
@@ -286,7 +294,7 @@ main .der{
 /*----------quinta sección del main-----*/
 /* contenedor quinta sección del main*/
 main .finalone{
-background-color: #F0A83E;
+background-color: #041430;
 flex-direction: column;
 /*width: 100%;*/
 height: 15vh;
@@ -300,8 +308,8 @@ justify-content: flex-start;
 }
 /*seteo icono y efecto*/
 main .finalone i{
-color:#fff;
-font-size: 32px;
+color:#f2f4fff2;
+font-size: 28px;
 margin: 2%;
 }
 main .finalone i:hover{
@@ -313,7 +321,7 @@ color: #3C2313;
 /*seteo h3 y efecto*/
 main .finalone h3{
 text-align: center;
-color:#FFFFFF;
+color:#f2f4fff2;
 font-size: 22px;
 margin-left: 10%;
 line-height: 23px;
@@ -334,14 +342,15 @@ align-items: center;
 main .part2 input{
 border-radius: 15px;
 width: 60%;
-height: 68%;
+height: 70%;
 border: none;
+text-align: center;
 }
 main .part2 button{
 border-radius: 25px;
 width: 30%;
 height: 60%;
-background-color: #3C2313;
+background-color: #68452d;
 color: #fff;
 margin-right: 5%;
 font-size: 1rem;
@@ -358,7 +367,7 @@ transition: 0.5s;
 /*contenedor footer*/
 footer{
 flex-direction: column;
-background-color: #3C2313;
+background-color: #041430;
 }
 /*contenedor de las dos listas emsabladas en el footer*/
 footer .lista1y2{
@@ -384,18 +393,15 @@ margin-left: 20%;
 footer .finalsecimg{
 flex-direction: column;
 width: 100%;
-gap:20px;
+gap:40px;
 }
 footer .finalsecimg:hover{
 cursor: pointer;
 }
 footer .finalsecimg img{
-font-size: 80px;
+width: 50px;
 }
-/*seteo lista2 info, localidad, telefono, correo y efectos*/
-footer .lista2{
-width: 100%;
-}
+
 footer .finalsectext{
 display: flex;
 flex-direction: column;
@@ -462,7 +468,7 @@ color: #F0A83E;
     list-style-type: '>';
     justify-content: space-between;
     width: 12vw;
-}
+}  
 
 /*seteo segundo encabezado*/
 
@@ -508,8 +514,8 @@ main .banner{
 }
 /* elemento "Es un placer tenerte aqui"*/
 main .imgfondo h2{
-    width: 30vw;
-    height: 5vh;
+    width: 32vw;
+    height: 8vh;
     padding: 0.2em;
 }
 /* seteo elemento p (comederos en descuento)*/
@@ -654,7 +660,7 @@ margin: 70%;
 /*seteo lista1 iconos footer*/
 footer .lista1{
 width: 20%;
-margin-left: 0%;
+margin: 12px;
 }
 footer .finalsecimg{
 width: 80%;
