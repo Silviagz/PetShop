@@ -73,7 +73,7 @@ header i{
 /*  seteo img de fondo */
 main .imgfondo{
     position: relative; /*cuando se mueve un objeto, pero no pierde el espacio lo conserva, pero con posición absoluta se mueve el objeto y lo rellena con el espacio*/ /*repasar posiciones*/
-    background-image: url("./img/bowl-and-pet-daities-on-green-background\ 1.png");
+    background-image: url("/img/bowl-and-pet-daities-on-green-background 1.png");
     height: 55vh;
     background-size: cover; /*porque la imagen es pequeña y el sistema la completa con la repetición de la misma por eso le ponemos esa propiedad*/
     }
