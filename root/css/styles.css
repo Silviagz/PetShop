@@ -62,6 +62,11 @@ height: 2.5vh;
 header i{
     font-size: 1.5em;
 }
+
+/* Se oculta la barra de navegación para la mobile */
+.header1, .menu{
+    display: none;
+}
 /*------------ inicio del main -------*/
 
 /*primera seccción del main*/
@@ -428,17 +433,12 @@ color: #F0A83E;
 }
 
 
-
-@media(max-width:500px){
-    /* configuración del header version mobile*/
-    .header1, .menu{
-    display:none;/* acá se está añadiendo la propiedad para desaparecer el display*/
-    }
-
-}
 /*------------------- version desktop--------*/
-@media(min-width: 1024px){
+@media(min-width: 501px){
 /*seteo primer encabezado*/
+.header1, .menu{
+    display: flex;
+}
 .header1{
     background-color: #222222;
     color: #fff;
