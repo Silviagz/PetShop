@@ -1,0 +1,35 @@
+main {
+    margin: 60px 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-color: red;
+    border-style: solid;
+
+}
+.producto {
+    max-width: 20%;
+    padding: 10px;
+    margin: 15px;
+    margin-bottom: 20px;
+    box-shadow: 2px 10px 3px 3px rgba(0, 0, 0, 0.3);
+    border-color: rebeccapurple;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.producto img {
+    width: auto;
+    height: 30%;
+    border-color: yellow;
+    border-style: solid;
+}
+
+.producto button {
+    padding: 10px 50px;
+    border-radius: 30px;
+    background-color: aqua;
+}

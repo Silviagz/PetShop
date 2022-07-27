@@ -1,0 +1,52 @@
+* {
+    margin: 0; /* Con esta propiedad eliminamos el margin que pueda tener por defecto, para poder trabajar de forma adecuada con las configuraciones o estilos que se le den a la pagina web*/
+    padding: 0; /* Con esta propiedad eliminamos el padding por defecto */
+    box-sizing: border-box; /* Con esta propiedad hacemos que cuando se le da padding o margin se conserve el tamaño original de los elementos */
+    
+}
+body {
+    width: 100vw; /* Con esta propiedad setiamos que la pagina web ocupe el 100% del ancho de la pantalla */
+    border-color: red;
+    border-style: solid;
+}
+h2 {
+    text-align: center;
+    padding: 50px;
+}
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+main i {
+    color: blue;
+    font-size: 40px;
+    width: 50px;
+}
+#formulario {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+}
+#formulario form {
+    width: 100%;
+}
+#formulario div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+}
+#formulario div input {
+    background-color: rgb(211, 248, 248);
+    width: 50%;
+    height: 40px;
+    border-radius: 10px;
+}
+form button {
+    margin-left: 50%;
+    margin-right: 50%;
+    padding: 10px;
+}
