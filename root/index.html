@@ -18,24 +18,15 @@
 <body>
 
     <header>
-        <section class="header1 flex-around">
-            <p>Grandes ofertas en comederos</p>
-            <nav>
-                <ul class="nav1 flex-around">
-                    <li><a href="#">Español</a></li>
-                    <li><a href="#">ARG$</a></li>
-                </ul>
-            </nav>
-        </section>
 
         <section class="header2 flex-around">
         <img class="logo" src="./img/Logo.png" alt="Logo-img">
         <nav class="menu">
             <ul>
-                <li><a href="#">Categorías</a></li>
+                <li><a href="#">Registrate</a></li>
                 <li><a href="#">Pets</a></li>
                 <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Contactanos</a></li>
+                <li><a href="#">Login</a></li>
             </ul>
         </nav>
         <i class="fa-solid fa-bars"></i> <!-- esta es la forma de llamar el icono que traje de fonts awesone -->
@@ -46,13 +37,11 @@
     <section class="imgfondo">
         <div class="banner flex-around">
         <h2>¡Es un placer tenerte aquí!</h2>
-        <!-- <p>¡Comederos en descuentos!</p> -->
-        <button>COMEDEROS</button>
+        <button id="carritoCerrar"> GO <i class="fa-solid fa-cart-shopping"></i></button>
         </div>
         <div class="modelo-carrito">
             <div class="carrito-compras"> 
                 <h3>Carrito</h3>
-                <button id="carritoCerrar"><i class="fa-solid fa-cart-shopping"></i></button>
                 <div id="carrito-contenedor"></div>
             <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
             <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
@@ -64,11 +53,13 @@
     <h2>Productos Destacados</h2>
     <nav>
         <ul class="listamenus2 flex-around">
-            <li><a href="./comederos.html">Comederos</a></li>
+            <li><a href="./comederos.html">COMEDEROS</a></li>
             <li>-</li>
-            <li><a href="#">Accesorios</a></li>
+            <li><a href="#">ACCESORIOS</a></li>
             <li>-</li>
-            <li><a href="#">Comida</a></li>
+            <li><a href="#">ALIMENTOS</a></li>
+            <li>-</li>
+            <li><a href="#">ASEO</a></li>
         </ul>
     </nav>
     </section>
@@ -90,15 +81,7 @@
             <span>$650</span>
         </div>
     </section>
-    <section class="formato-contacto flex-around">
-        <h2>Contáctanos</h2>
-        <input type="text" placeholder="Nombre y apellido">
-        <input type="text" placeholder="Ingresa a tu correo electrónico">
-        <input type="text" placeholder="Teléfono">
-        <div class="flex-around botones">
-            <button class="izq">Resetear</button>
-            <button class="der">Enviar</button>
-        </div>
+
     </section>
     <section class="finalone flex-around">
         <div class="part1 flex-around">
