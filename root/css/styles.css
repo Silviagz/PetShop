@@ -82,7 +82,7 @@ header i{
 /*  seteo img de fondo */
 main .imgfondo{
     position: relative; /*cuando se mueve un objeto, pero no pierde el espacio lo conserva, pero con posición absoluta se mueve el objeto y lo rellena con el espacio*/ /*repasar posiciones*/
-    background-image: url("/root/img/comedero-antireflujo.png");
+    background-image: url("root/img/comedero-antireflujo.png");
     background-repeat: no-repeat;
     height: 60vh;
     background-size: cover; /*porque la imagen es pequeña y el sistema la completa con la repetición de la misma por eso le ponemos esa propiedad*/
