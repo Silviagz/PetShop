@@ -456,7 +456,7 @@ color: #F0A83E;
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
-    opacity: 0;
+    opacity: 0.5;
     visibility: hidden;
 }
 

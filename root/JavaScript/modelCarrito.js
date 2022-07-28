@@ -1,7 +1,7 @@
 const contenedorCarro = document.getElementsByClassName('modelo-carrito')[0]
 const botonAbrir = document.getElementById('boton-carrito')
 const botonCerrar = document.getElementById('carritoCerrar')
-const modalCarrito = Document.getElementsByClassName('carrito-compras')[0]
+const modalCarrito = document.getElementsByClassName('carrito-compras')[0]
 
 /* Funciones para que se muestre y se oculte la ventana emergente del carrito */
 botonAbrir.addEventListener('click', ()=>{
