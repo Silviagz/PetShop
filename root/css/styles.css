@@ -443,6 +443,27 @@ transition: 0.2s;
 color: #F0A83E;
 }
 
+/* -----------Estilos para el carrito de compras -------------------*/
+.modelo-carrito{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/*Estilos para la ventana emergente del carrito de compras*/
+.modal-active{
+    opacity: 1;
+    visibility: visible;
+}
+
 
 /*------------------- version desktop--------*/
 @media(min-width: 501px){

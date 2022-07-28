@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5de0d695be.js" crossorigin="anonymous"></script>
     <script src="./JavaScript/main.js"></script>
+    <script src="./JavaScript/modelCarrito.js"></script>
     <link rel="stylesheet" href="./css/styles.css">
     
 </head>
@@ -47,17 +48,21 @@
         <div class="banner flex-around">
         <h2>¡Es un placer tenerte aquí!</h2>
         <!-- <p>¡Comederos en descuentos!</p> -->
-        <button>COMEDEROS</button>
-        </div>
-        <div class="modelo-carrito">
-            <div class="carrito-compras"> 
-                <h3>Carrito</h3>
-                <button id="carritoCerrar"><i class="fa-solid fa-cart-shopping"></i></button>
-                <div id="carrito-contenedor"></div>
-            <p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
-            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
         </div>
     </section>
+    <button id="boton-carrito"><span>GO!</span> <i class="fa-solid fa-cart-shopping"></i> <span id="contadorCarrito">0</span></button>
+
+    <!-- Ventana emergente del carrito -->
+    <div class="modelo-carrito">
+        <div class="carrito-compras"> 
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fa-solid fa-rectangle-xmark"></i></button>
+            <div id="carrito-contenedor">
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+        </div>
+    </div>
 
     <section class="menu2 flex-around">
     <img src="./img/pawprint 1.png" alt="logo-huellita">
