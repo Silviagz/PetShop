@@ -4,7 +4,8 @@
 resolución recomendada: 500px versión mobile, 1024 versión desktop*/
 *{
     margin:0;
-    padding:0; /*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
+    padding:0; 
+    box-sizing: border-box;/*esta es la forma como se debe iniciar toda configuración de página, debido a que por defecto hay unos márgenes que afectan al header*/
     /* box-sizing: border-box; esta propiedad es importante porque los contenedores pueden aumentar su tamaño al agregar propiedades, por esta razón necesitamos que el elemento tenga el mismo tamaño sin que lo desconfigure su borde */
     font-family: 'Roboto', sans-serif;
 }
@@ -28,7 +29,7 @@ body{
 }
 /* se inicia con esta configuración porque el header1 hace parte del version desktop que contiene una p y un nav*/
 
-/*configuración del header*/
+
 /* configuración linkeo y efectos de los nav header*/
 
 header .header1 nav .nav1 li a{
@@ -41,11 +42,11 @@ header .header1 nav .nav1 li a:hover{
     font-size: 15px;
     color:#F0A83E;
 }
-header .header2 .menu ul li a{
+header .header2 #menu ul li a{
     text-decoration: none;
     color: #fff;
 }
-header .header2 .menu ul li a:hover{
+header .header2 #menu ul li a:hover{
     cursor: pointer;
     transition: 0.5s;
     font-size: 20px;
@@ -75,7 +76,7 @@ header i{
 }
 
 /* Se oculta la barra de navegación para la mobile */
-.header1, .menu{
+.header1, #menu{
     display: none;
 }
 /*------------ inicio del main -------*/
@@ -419,21 +420,9 @@ footer .finalsectext h2{
 margin-top: 2%;
 color: #fff;
 }
-footer .finalsectext h2:hover{
-cursor: pointer;
-transition: 0.2s;
-font-size: 30px;
-color: #F0A83E;
-}
 
 footer .finalsectext p{
 color: #8A8787;
-}
-footer .finalsectext p:hover{
-cursor: pointer;
-transition: 0.2s;
-font-size: 30px;
-color: #F0A83E;
 }
 
 footer .derechos{
@@ -540,7 +529,7 @@ color: #F0A83E;
 /*------------------- version desktop--------*/
 @media(min-width: 501px){
 /*seteo primer encabezado*/
-.header1, .menu{
+.header1, #menu{
     display: flex;
 }
 .header1{
@@ -578,7 +567,7 @@ header .header2{
     justify-content: space-around;
     margin-right: 2%;
 }
-.header2 .menu li{
+.header2 #menu li{
     list-style-type: '';
 }
 
@@ -742,7 +731,7 @@ margin: 12px;
 }
 footer .finalsecimg{
 width: 80%;
-gap:14px;
+gap:25px;
 margin-top: 14%;
 }
 footer .finalsecimg img{
@@ -753,7 +742,7 @@ footer .lista2{
 display: flex;
 flex-direction: column;
 position: relative;
-width: 40vw;
+width: 70vw;
 margin-bottom: 4%;
 align-items: flex-start;
 justify-content: space-around;
