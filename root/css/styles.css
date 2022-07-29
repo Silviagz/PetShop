@@ -32,33 +32,19 @@ body{
 
 /* configuración linkeo y efectos de los nav header*/
 
-header .header1 nav .nav1 li a{
-    color: white;
-    text-decoration: none;
-}
-header .header1 nav .nav1 li a:hover{
-    cursor: pointer;
-    transition: 0.5s;
-    font-size: 15px;
-    color:#F0A83E;
-}
-header .header2 #menu ul li a{
+header #menu ul li a{
     text-decoration: none;
     color: #fff;
 }
-header .header2 #menu ul li a:hover{
+header #menu ul li a:hover{
     cursor: pointer;
     transition: 0.5s;
     font-size: 20px;
     color:#F0A83E;
 }
 
-header .header2{   
+header .header2 {   
     background-color: #041430;
-    }
-
-/* seteado contendor del header y elementos (logo y menú hamburguesa)*/
-header .header2{
     height: 7vh;
     color: #fff;
     align-items: center;
@@ -70,13 +56,16 @@ height: 2.5vh;
 
 }
 /*seteo menú hamburguesa*/
-
-header i{
-    font-size: 1.5em;
+#hamMenu {
+    font-size: 1.8em;
+    width: 40px;
+    background-color: #041430;
+    border: none;
+    color: #e0dcdc;
 }
 
 /* Se oculta la barra de navegación para la mobile */
-.header1, #menu{
+#menu{
     display: none;
 }
 /*------------ inicio del main -------*/
@@ -114,21 +103,9 @@ main .imgfondo h2{
     font-size: 1.5rem;
 }
 main .imgfondo {
-cursor: pointer;
-transition: 0.2s;
 font-size: 25px;
 color: #FFFFFF;
 background-color: #F0A83E;
-}
-/* seteo elemento p (comederos en descuento) y efecto*/
-
-main .imgfondo p{
-    color: #cbcbcb;
-    
-    font-size: 1.2rem;
-}
-main .imgfondo p:hover{
-cursor: pointer;
 }
 
 /*seteo elemento button (comederos)*/
@@ -164,9 +141,6 @@ main .menu2 img{
     height: 10vh; 
     margin-bottom: 5%;
 }
-main .menu2 img:hover{
-cursor: pointer;
-}
 
 /* seteo productos destacados*/
 main .menu2 h2{
@@ -177,9 +151,7 @@ main .menu2 h2{
     color: #68452d;
     font-weight: 900;
 }
-main .menu2 h2:hover{
-    cursor: pointer;
-}
+
 /* seteo contenedor y elementos menu2 (comederos, accesorios, comida)*/
 main .menu2 nav{
     width: 80%;
@@ -242,63 +214,6 @@ color: #F0A83E;
 }
 
 /*---------- cuarta sección del main----*/
-
-/*seteo contenedor cuarta sección main*/
-
-main .formato-contacto{
-    flex-direction: column;
-    align-items: center;
-}
-/*configruación contáctanos*/
-
-main .formato-contacto h2{
-    font-size: 40px;
-    color:#68452d;
-    margin-bottom: 6%;
-}
-/*configuración inputs */
-main .formato-contacto input{
-    background-color: #df6300bd;
-    color: #AB9C9C;
-    width: 75%; /*se modifica ancho de los botones*/
-    font-size: 10px;
-    height: 40px; /*se aumenta el ancho de los botones*/
-    border-radius: 15px; /* En este caso se cambia la forma de los botones a circulares*/
-    margin-bottom: 1%;
-    border-color: #708090; /*se quita borde de los botones*/
-}
-main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
-    text-align: center;
-}
-main .botones{
-justify-content: center;
-width: 90vw;
-height: 10vh;
-margin: 5%;
-}
-main .botones button{ /* Acá llamo a los dos botones mirar la forma de llamar esta clase*/
-height: 60%;
-width: 100%;
-color: #fff;
-border:none;
-margin: 5px;
-border-radius: 25px;
-}
-main .botones button:hover{ 
-opacity: 0.7;
-cursor: pointer;
-transition: 0.5s;
-}
-
-main .izq{
-    background-color:#68452d;
-
-}
-main .der{
-    background-color: #F0A83E;
-}
-/*----------quinta sección del main-----*/
-/* contenedor quinta sección del main*/
 main .finalone{
 background-color: #041430;
 flex-direction: column;
@@ -400,10 +315,9 @@ footer .finalsecimg{
 flex-direction: column;
 width: 100%;
 gap:40px;
-}
-footer .finalsecimg:hover{
 cursor: pointer;
 }
+
 footer .finalsecimg img{
 width: 50px;
 }
@@ -529,32 +443,11 @@ color: #F0A83E;
 /*------------------- version desktop--------*/
 @media(min-width: 501px){
 /*seteo primer encabezado*/
-.header1, #menu{
+#menu{
     display: flex;
 }
-.header1{
-    background-color: #222222;
-    color: #fff;
-    align-items: center;
-    justify-content: space-between;
-}
-.header1 p:hover{
-    cursor: pointer;
-    transition: 0.2s;
-    color: #F0A83E;
-
-}
-.header1 ul{
-    text-decoration: none;
-    list-style-type: none;
-    list-style-type: '>';
-    justify-content: space-between;
-    width: 12vw;
-}  
 
 /*seteo segundo encabezado*/
-
-
 /* seteado contendor del header y elementos (logo y menú navegación desktop)*/
 header .header2{
     justify-content: space-between;
@@ -600,11 +493,6 @@ main .imgfondo h2{
     height: 8vh;
     padding: 0.2em;
 }
-/* seteo elemento p (comederos en descuento)*/
-
-main .imgfondo p{
-    font-weight: 500;
-}
 /*seteo elemento button (comederos)*/
 
 main .imgfondo button{
@@ -637,37 +525,7 @@ main .listamenus2 li{
 .listamenus2 a{
     font-size: 1em;
 }
-/*------- tercera sección del main---------*/
-
-/* seteo contenedor tercer sección*/
-
-
 /*---------- cuarta sección del main----*/
-
-/*configruación contáctanos*/
-
-main .formato-contacto h2{
-    font-size: 25px;
-    margin-bottom: 1%;
-}
-/*configuración inputs */
-main .formato-contacto input{
-    width: 38%;
-}
-main .formato-contacto input::placeholder{ /*para centrar el texto del botón*/
-    color: #fff;
-}
-/* configuración de botones */
-main .botones{
-width:26vw;
-height: 7.5vh;
-margin: 2%;
-}
-main .botones button{ 
-    font-size: 1rem;
-}
-/*----------quinta sección del main-----*/
-/* contenedor quinta sección del main*/
 main .finalone{
 flex-direction: row;
 height: 6vh;
@@ -760,3 +618,16 @@ footer .finalsectext p{
 align-items: flex-start;
 }
 }
+
+@media (min-width: 770px) {
+main .imgfondo{
+    background-image: url("/root/img/comedero-antireflujo.png");
+}
+}
+
+@media (min-width: 1200px) {
+    main .imgfondo{
+        background-image: url("/root/img/comedero-antireflujo.png");
+    }
+}
+
