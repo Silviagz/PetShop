@@ -8,6 +8,7 @@ let stockComederos = [
 /* Generando las i-cards para los productos dependiendo de las categorias*/
 const contenedorComederos = document.getElementById('contenedorcomederos')
 
+
 stockComederos.forEach((comedero) => {
     const div = document.createElement('div')
     div.classList.add('producto')
@@ -19,6 +20,11 @@ stockComederos.forEach((comedero) => {
     <button id="agregar${comedero.id}" class="boton-agregar">Agregar <i class="fa-regular fa-heart"></i></button>
     `
     contenedorComederos.appendChild(div)
+
+    const boton = document.getElementById(`agregar${comedero.id}`)
+    boton.addEventListener('click', () => {  /* cuando le den clic en agregar en la imagen, esto ocasionará un evento que hace activar la funcion de agregar al carrito */
+        agregarAlCarrito(comedero.id)
+    })
 });
 
 
@@ -34,56 +40,51 @@ const agregarAlCarrito = (prodId) =>{
     console.log(carrito)
 }
 
-/*Actualizar carrito cuando se agreguen productos */
+// /*Actualizar carrito cuando se agreguen productos */
 const contenedorCarrito = document.getElementById('carrito-contenedor')
 
-const actualizarCarrito =() => {
-    contenedorCarrito.innerHTML = ""
-
-    carrito.forEach((prod) =>{
+const actualizarCarrito = () => {
+    
+    carrito.forEach((prod)=>{
         const div = document.createElement('div')
         div.className = ('productoEnCarrito')
         div.innerHTML = `
-        <p>${comedero.nombre}</p>
-        <p>Precio: ${comedero.precio}</p>
-        <p>Cantidad: <span id="cantidad">${comedero.cantidad}</span></p>
-        <button onclick= "eliminarDelCarrito(${comederos.id})" class="boton-eliminar"><i class="fas fa-trash-alt"></button>
+        <p>${prod.nombre}</p>
+        <p>${prod.precio}</p>
+        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick="eliminarDelCarrito(${prod.id})" class="boton-eliminar"></button>
         `
+
         contenedorCarrito.appendChild(div)
-
-        localStorage.setItem('carrito', JSON.stringify(carrito) )
     })
-
-    contadorCarrito.innerText = carrito.length /* Para que en el carrito se vea la cantidad de articulos*/
-    precioTotal.innerText = carrito.reduce((acc, comederos) => acc + comederos.precio, 0)
 }
 
-/* Actualizar carrito cuando se eliminan productos */
-const eliminarDelCarrito = (prodId) => {
-    const item = carrito.find((comederos) => comederos.id=== prodId)
-    const indice = carrito.indexOf(item)
-    carrito.splice(indice, 1)
-    actualizarCarrito()
-}
+// /* Actualizar carrito cuando se eliminan productos */
+// const eliminarDelCarrito = (prodId) => {
+//     const item = carrito.find((comederos) => comederos.id=== prodId)
+//     const indice = carrito.indexOf(item)
+//     carrito.splice(indice, 1)
+//     actualizarCarrito()
+// }
 
 
-/* Funcionamiento del boton Vaciar Carrito*/
-const botonVaciar = document.getElementById('vaciar-carrito')
+// /* Funcionamiento del boton Vaciar Carrito*/
+// const botonVaciar = document.getElementById('vaciar-carrito')
 
-botonVaciar.addEventListener('click', () =>{
-    carrito.length = 0
-    actualizarCarrito()
-})
+// botonVaciar.addEventListener('click', () =>{
+//     carrito.length = 0
+//     actualizarCarrito()
+// })
 
-/* Contador del carrito, es decir que sume todos los artículos que se van adicionando al carrito*/
-const contadorCarrito = document.getElementById('contadorCarrito')
-const precioTotal = document.getElementById('precioTotal')
+// /* Contador del carrito, es decir que sume todos los artículos que se van adicionando al carrito*/
+// const contadorCarrito = document.getElementById('contadorCarrito')
+// const precioTotal = document.getElementById('precioTotal')
 
-/* Llamamos el local storage, esto con el fin de almacenar los datos desde Javascript*/
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('carrito')){
-        carrito = JSON.parse(localStorage.getItem('carrito'))
-        actualizarCarrito()
-    }
-})
+// /* Llamamos el local storage, esto con el fin de almacenar los datos desde Javascript*/
+// document.addEventListener('DOMContentLoaded', () => {
+//     if (localStorage.getItem('carrito')){
+//         carrito = JSON.parse(localStorage.getItem('carrito'))
+//         actualizarCarrito()
+//     }
+// })
 

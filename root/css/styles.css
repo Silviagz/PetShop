@@ -483,6 +483,11 @@ color: #F0A83E;
    font-size: 30px;
 }
 
+.productoEnCarrito{
+    border-color: red;
+    border-style: solid;
+}
+
 
 /*Estilos para la ventana emergente del carrito de compras*/
 .modal-active{
